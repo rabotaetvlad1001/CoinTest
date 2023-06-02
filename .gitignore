@@ -1,0 +1,25 @@
+# Xcode
+.DS_Store
+*.xcuserstate
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+
+# Swift-specific
+.DS_Store
+build/
+DerivedData/
+.idea/
+.vscode/
+
+# Cocoapods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build
+
+# Sensitive or personal information (example)
+config.plist
+
+
