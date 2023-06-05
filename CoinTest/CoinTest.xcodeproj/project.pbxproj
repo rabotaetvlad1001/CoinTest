@@ -12,6 +12,14 @@
 		C905D9DE2A2A0BAB00D46777 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905D9DD2A2A0BAB00D46777 /* ListViewController.swift */; };
 		C905D9E32A2A0BAD00D46777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C905D9E22A2A0BAD00D46777 /* Assets.xcassets */; };
 		C905D9E62A2A0BAD00D46777 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C905D9E42A2A0BAD00D46777 /* LaunchScreen.storyboard */; };
+		C94F909D2A2CEED400163996 /* CoinListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F909C2A2CEED400163996 /* CoinListData.swift */; };
+		C94F909F2A2CEF2400163996 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F909E2A2CEF2400163996 /* CoinModel.swift */; };
+		C94F90A12A2CF0D300163996 /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F90A02A2CF0D300163996 /* CoinListViewModel.swift */; };
+		C94F90A52A2CFADA00163996 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F90A42A2CFADA00163996 /* NetworkManager.swift */; };
+		C94F90A72A2D023F00163996 /* NetworkConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F90A62A2D023F00163996 /* NetworkConfigurator.swift */; };
+		C94F90A92A2D03F500163996 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F90A82A2D03F500163996 /* CustomError.swift */; };
+		C94F90AC2A2D0A1300163996 /* CoinsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F90AB2A2D0A1300163996 /* CoinsService.swift */; };
+		C94F90AE2A2D0B2D00163996 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94F90AD2A2D0B2D00163996 /* DI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		C905D9E22A2A0BAD00D46777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C905D9E52A2A0BAD00D46777 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C905D9E72A2A0BAD00D46777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C94F909C2A2CEED400163996 /* CoinListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListData.swift; sourceTree = "<group>"; };
+		C94F909E2A2CEF2400163996 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		C94F90A02A2CF0D300163996 /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
+		C94F90A42A2CFADA00163996 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C94F90A62A2D023F00163996 /* NetworkConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurator.swift; sourceTree = "<group>"; };
+		C94F90A82A2D03F500163996 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		C94F90AB2A2D0A1300163996 /* CoinsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsService.swift; sourceTree = "<group>"; };
+		C94F90AD2A2D0B2D00163996 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +70,9 @@
 		C905D9D82A2A0BAB00D46777 /* CoinTest */ = {
 			isa = PBXGroup;
 			children = (
+				C94F90AA2A2D09FE00163996 /* CoinsService */,
 				C94F909A2A2CED1D00163996 /* Base */,
+				C94F90A32A2CFAC300163996 /* Network */,
 				C94F90982A2CECE000163996 /* CoinListModule */,
 				C905D9E22A2A0BAD00D46777 /* Assets.xcassets */,
 				C905D9E42A2A0BAD00D46777 /* LaunchScreen.storyboard */,
@@ -66,6 +84,8 @@
 		C94F90982A2CECE000163996 /* CoinListModule */ = {
 			isa = PBXGroup;
 			children = (
+				C94F909B2A2CEEA900163996 /* Model */,
+				C94F90A22A2CF0DA00163996 /* ViewModel */,
 				C94F90992A2CED0500163996 /* View */,
 			);
 			path = CoinListModule;
@@ -86,6 +106,42 @@
 				C905D9DB2A2A0BAB00D46777 /* SceneDelegate.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		C94F909B2A2CEEA900163996 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C94F909C2A2CEED400163996 /* CoinListData.swift */,
+				C94F909E2A2CEF2400163996 /* CoinModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C94F90A22A2CF0DA00163996 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C94F90A02A2CF0D300163996 /* CoinListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C94F90A32A2CFAC300163996 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C94F90A42A2CFADA00163996 /* NetworkManager.swift */,
+				C94F90A62A2D023F00163996 /* NetworkConfigurator.swift */,
+				C94F90A82A2D03F500163996 /* CustomError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C94F90AA2A2D09FE00163996 /* CoinsService */ = {
+			isa = PBXGroup;
+			children = (
+				C94F90AB2A2D0A1300163996 /* CoinsService.swift */,
+				C94F90AD2A2D0B2D00163996 /* DI.swift */,
+			);
+			path = CoinsService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94F909F2A2CEF2400163996 /* CoinModel.swift in Sources */,
+				C94F90A72A2D023F00163996 /* NetworkConfigurator.swift in Sources */,
+				C94F90AC2A2D0A1300163996 /* CoinsService.swift in Sources */,
+				C94F909D2A2CEED400163996 /* CoinListData.swift in Sources */,
+				C94F90AE2A2D0B2D00163996 /* DI.swift in Sources */,
 				C905D9DE2A2A0BAB00D46777 /* ListViewController.swift in Sources */,
+				C94F90A52A2CFADA00163996 /* NetworkManager.swift in Sources */,
+				C94F90A92A2D03F500163996 /* CustomError.swift in Sources */,
+				C94F90A12A2CF0D300163996 /* CoinListViewModel.swift in Sources */,
 				C905D9DA2A2A0BAB00D46777 /* AppDelegate.swift in Sources */,
 				C905D9DC2A2A0BAB00D46777 /* SceneDelegate.swift in Sources */,
 			);
